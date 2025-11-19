@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Rich SEO Meta Tags -->
+    <title>How to Talk Without Fighting | Transform Conflict into Connection</title>
+    <meta name="description"
+        content="The ultimate guide to calm, clear, connected conversations. Stop the cycles of argument, heal your relationships, and master the art of repair. By Farid Jafarli.">
+    <meta name="keywords"
+        content="communication skills, relationship advice, conflict resolution, marriage help, parenting tips, Farid Jafarli, emotional intelligence, nonviolent communication">
+    <meta name="author" content="Farid Jafarli">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="book">
+    <meta property="og:url" content="https://www.amazon.com/dp/B0FS55QXVH">
+    <meta property="og:title" content="How to Talk Without Fighting">
+    <meta property="og:description"
+        content="Stop fighting. Start connecting. Use AI tools and practical psychology to fix your relationships.">
+    <meta property="og:image" content="HowToTalkWithoutFightingEbook.jpg">
+
+    <!-- Schema.org Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "How to Talk Without Fighting",
+      "author": {
+        "@type": "Person",
+        "name": "Farid Jafarli"
+      },
+      "url": "https://www.amazon.com/dp/B0FS55QXVH",
+      "image": "HowToTalkWithoutFightingEbook.jpg",
+      "description": "A guide to calm, clear, connected conversations. Stop hurting the ones you love and start understanding them.",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "price": "9.99",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'book-cream': '#F9F6ED',
+                        'book-green': '#2C5F58',
+                        'book-sage': '#9BB089',
+                        'book-blue': '#7FA9A8',
+                        'book-dark': '#1A3C38',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Noto Serif Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'book': '0 20px 40px -10px rgba(44, 95, 88, 0.3)',
+                        'glow': '0 0 20px rgba(155, 176, 137, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 3D Book Animation */
+        .perspective-container {
+            perspective: 1500px;
+        }
+
+        .book-cover-3d {
+            transform-style: preserve-3d;
+            transform: rotateY(-25deg) rotateX(5deg);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease;
+            box-shadow: -15px 20px 30px rgba(0, 0, 0, 0.3);
+            will-change: transform, box-shadow;
+        }
+
+        /* Allow JS to control transform instantly without lag */
+        .book-cover-3d.tracking {
+            transition: none;
+        }
+
+        /* Loading Spinner */
+        .loader {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 3px solid white;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Smooth Accordion Transition */
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] summary~* {
+            animation: sweep .5s ease-in-out;
+        }
+
+        @keyframes sweep {
+            0% {
+                opacity: 0;
+                margin-top: -10px
+            }
+
+            100% {
+                opacity: 1;
+                margin-top: 0px
+            }
+        }
+    </style>
+
+    <!-- Google Analytics 4 (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+
+<body
+    class="bg-book-cream text-gray-800 antialiased selection:bg-book-sage selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-book-cream/95 backdrop-blur-md border-b border-book-green/10 transition-all duration-300 shadow-sm"
+        id="navbar">
+        <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between items-center">
+            <!-- Logo Text -->
+            <a href="#"
+                class="font-serif text-lg lg:text-xl font-bold text-book-green tracking-tight hover:opacity-80 transition flex items-center gap-2">
+                <i class="fa-solid fa-book-open-reader"></i>
+                How to Talk Without Fighting
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#problem" class="text-sm font-semibold text-gray-600 hover:text-book-green transition">The
+                    Problem</a>
+                <a href="#tools"
+                    class="text-sm font-semibold text-gray-600 hover:text-book-green transition flex items-center gap-1">
+                    <i class="fa-solid fa-wand-magic-sparkles text-book-sage"></i> Tools
+                </a>
+                <a href="#preview" class="text-sm font-semibold text-gray-600 hover:text-book-green transition">Inside
+                    the Book</a>
+                <a href="#faq" class="text-sm font-semibold text-gray-600 hover:text-book-green transition">FAQ</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://www.amazon.com/dp/B0FS55QXVH" target="_blank"
+                class="amazon-track-btn bg-book-green hover:bg-book-dark text-white px-5 py-2 rounded-full font-medium text-sm transition-all transform hover:scale-105 shadow-md flex items-center gap-2">
+                Buy on Amazon <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden relative">
+        <!-- Background Decor -->
+        <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-book-sage/20 to-transparent rounded-full blur-3xl -mr-32 -mt-32">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-t from-book-blue/20 to-transparent rounded-full blur-3xl -ml-20 -mb-20">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+
+                <!-- Text Content -->
+                <div class="lg:w-1/2 space-y-8 text-center lg:text-left animate-fade-in-up">
+                    <span
+                        class="inline-flex items-center gap-2 py-1 px-4 rounded-full bg-white border border-book-green/20 text-book-green text-xs font-bold tracking-wide uppercase shadow-sm mb-2">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        Bestselling Principles
+                    </span>
+                    <h1 class="font-serif text-4xl lg:text-6xl font-bold text-book-green leading-[1.1]">
+                        Stop Fighting. <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-book-blue to-book-sage">Start
+                            Connecting.</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        Tired of watching good people hurt each other with words?
+                        Discover the guide to calm, clear, connected conversations that creates safety instead of
+                        defensiveness.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="https://www.amazon.com/dp/B0FS55QXVH" target="_blank"
+                            class="amazon-track-btn bg-book-green text-white text-lg px-8 py-4 rounded-full font-bold shadow-book hover:bg-book-dark hover:shadow-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                            <i class="fa-brands fa-amazon"></i> Get Your Copy
+                        </a>
+                        <a href="#preview"
+                            class="text-book-green border-2 border-book-green px-8 py-4 rounded-full font-bold hover:bg-book-green hover:text-white transition-all flex items-center justify-center">
+                            See Inside
+                        </a>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-center lg:justify-start gap-6 pt-4 text-sm text-gray-500 font-medium">
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-check text-book-sage"></i> Instant
+                            Access</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-check text-book-sage"></i> Practical
+                            Tools</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-check text-book-sage"></i>
+                            Scientific Approach</span>
+                    </div>
+                </div>
+
+                <!-- Book Cover Image (Interactive) -->
+                <div class="lg:w-1/2 flex justify-center perspective-container pb-10 lg:pb-0">
+                    <div class="relative group cursor-pointer">
+                        <img src="HowToTalkWithoutFightingEbook.jpg" alt="How to Talk Without Fighting Book Cover"
+                            class="book-cover-3d w-64 lg:w-80 rounded-r-md object-cover"
+                            onerror="this.src='https://placehold.co/400x600/2C5F58/F9F6ED?text=Book+Cover+Image'; this.classList.remove('book-cover-3d'); this.classList.add('shadow-2xl', 'rounded-lg');">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section: Who is this for? (New Interesting Section 1) -->
+    <section class="py-20 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/3">
+                    <h2 class="font-serif text-3xl lg:text-4xl font-bold text-book-green mb-6">Is This Book For You?
+                    </h2>
+                    <p class="text-gray-600 text-lg mb-8">If you see yourself in any of these statements, the tools in
+                        this book were designed specifically for your situation.</p>
+                    <div class="h-1 w-20 bg-book-sage rounded-full"></div>
+                </div>
+                <div class="lg:w-2/3 grid sm:grid-cols-2 gap-6">
+                    <!-- Checklist Item 1 -->
+                    <div class="flex gap-4 p-4 rounded-xl bg-book-cream/50 hover:bg-book-cream transition-colors">
+                        <div
+                            class="flex-shrink-0 w-6 h-6 mt-1 bg-book-green text-white rounded-full flex items-center justify-center text-xs">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p class="text-gray-700 font-medium">You feel like you're constantly "walking on eggshells" to
+                            avoid upsetting your partner.</p>
+                    </div>
+                    <!-- Checklist Item 2 -->
+                    <div class="flex gap-4 p-4 rounded-xl bg-book-cream/50 hover:bg-book-cream transition-colors">
+                        <div
+                            class="flex-shrink-0 w-6 h-6 mt-1 bg-book-green text-white rounded-full flex items-center justify-center text-xs">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p class="text-gray-700 font-medium">Small disagreements quickly spiral into rehashing the past
+                            or personal attacks.</p>
+                    </div>
+                    <!-- Checklist Item 3 -->
+                    <div class="flex gap-4 p-4 rounded-xl bg-book-cream/50 hover:bg-book-cream transition-colors">
+                        <div
+                            class="flex-shrink-0 w-6 h-6 mt-1 bg-book-green text-white rounded-full flex items-center justify-center text-xs">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p class="text-gray-700 font-medium">You struggle to set boundaries without feeling guilty or
+                            starting a fight.</p>
+                    </div>
+                    <!-- Checklist Item 4 -->
+                    <div class="flex gap-4 p-4 rounded-xl bg-book-cream/50 hover:bg-book-cream transition-colors">
+                        <div
+                            class="flex-shrink-0 w-6 h-6 mt-1 bg-book-green text-white rounded-full flex items-center justify-center text-xs">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p class="text-gray-700 font-medium">You want to reconnect, but you don't know how to break the
+                            silence after an argument.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="py-20 bg-book-cream" id="problem">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center space-y-6 mb-16">
+                <h2 class="font-serif text-3xl lg:text-4xl font-bold text-book-green">The High Cost of Conflict</h2>
+                <p class="text-gray-600 text-lg">Most of us never set out to damage our relationships. Yet, our attempts
+                    to communicate often lead to the very conflicts we try to avoid.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="p-8 bg-white rounded-2xl shadow-sm border border-book-green/5 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-gray-800 mb-3">Constant Arguments</h3>
+                    <p class="text-gray-600">Small disagreements spiral into big fights. The same issues come up again
+                        and again without resolution.</p>
+                </div>
+
+                <div
+                    class="p-8 bg-white rounded-2xl shadow-sm border border-book-green/5 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-gray-800 mb-3">Defensive Walls</h3>
+                    <p class="text-gray-600">Conversations feel like battles. You or your partner shut down, withdraw,
+                        or get defensive instantly.</p>
+                </div>
+
+                <div
+                    class="p-8 bg-white rounded-2xl shadow-sm border border-book-green/5 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 bg-blue-50 text-book-blue rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fa-solid fa-heart-crack"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-gray-800 mb-3">Growing Distance</h3>
+                    <p class="text-gray-600">The erosion of trust creates a careful distance. You live alongside people
+                        you love but can no longer reach.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Tools Section -->
+    <section class="py-24 bg-book-dark relative overflow-hidden" id="tools">
+        <!-- Pattern Overlay -->
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-white/10 text-book-sage text-sm font-bold tracking-wide uppercase mb-3 backdrop-blur-sm border border-white/10">
+                    Free Resources
+                </span>
+                <h2 class="font-serif text-3xl lg:text-5xl font-bold text-white mb-6">AI Communication Coach</h2>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Experience the book's principles in action. Use these free tools to instantly shift the dynamic of
+                    your next conversation.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+
+                <!-- Tool 1: Conflict Transformer -->
+                <div
+                    class="bg-white p-6 lg:p-8 rounded-3xl shadow-2xl flex flex-col h-full border-t-4 border-book-sage transform transition hover:scale-[1.01]">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-10 h-10 bg-book-sage text-white rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-book-green">Conflict Transformer</h3>
+                    </div>
+                    <p class="text-gray-500 mb-6 text-sm flex-grow">Turn a heated thought into a calm "I-statement" that
+                        invites connection.</p>
+
+                    <div class="space-y-4">
+                        <textarea id="transformer-input"
+                            class="w-full p-3 rounded-xl bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-book-sage focus:border-transparent text-sm resize-none"
+                            rows="3" placeholder="e.g., You never help with the dishes!"></textarea>
+                        <button id="transformer-btn"
+                            class="w-full bg-book-green hover:bg-book-dark text-white py-3 rounded-xl font-bold transition shadow-md flex items-center justify-center gap-2 text-sm">
+                            <span>Transform Text</span>
+                        </button>
+                        <div id="transformer-output"
+                            class="hidden p-4 bg-book-cream rounded-xl border border-book-sage/30 text-sm text-book-dark font-medium italic">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 2: Tone Check -->
+                <div
+                    class="bg-white p-6 lg:p-8 rounded-3xl shadow-2xl flex flex-col h-full border-t-4 border-book-blue transform transition hover:scale-[1.01]">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-10 h-10 bg-book-blue text-white rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-book-green">Tone Check</h3>
+                    </div>
+                    <p class="text-gray-500 mb-6 text-sm flex-grow">Detect hidden aggression or defensiveness in your
+                        drafts before sending.</p>
+
+                    <div class="space-y-4">
+                        <textarea id="tone-input"
+                            class="w-full p-3 rounded-xl bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-book-blue focus:border-transparent text-sm resize-none"
+                            rows="3" placeholder="e.g., Per my last email..."></textarea>
+                        <button id="tone-btn"
+                            class="w-full bg-book-blue hover:bg-book-green text-white py-3 rounded-xl font-bold transition shadow-md flex items-center justify-center gap-2 text-sm">
+                            <span>Analyze Tone</span>
+                        </button>
+                        <div id="tone-output"
+                            class="hidden p-4 bg-blue-50 rounded-xl border border-blue-100 text-sm text-gray-700"></div>
+                    </div>
+                </div>
+
+                <!-- Tool 3: Apology Architect (New) -->
+                <div
+                    class="bg-white p-6 lg:p-8 rounded-3xl shadow-2xl flex flex-col h-full border-t-4 border-gray-400 transform transition hover:scale-[1.01]">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-10 h-10 bg-gray-600 text-white rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-book-green">Apology Architect</h3>
+                    </div>
+                    <p class="text-gray-500 mb-6 text-sm flex-grow">Craft a sincere apology that repairs trust without
+                        making excuses.</p>
+
+                    <div class="space-y-4">
+                        <textarea id="apology-input"
+                            class="w-full p-3 rounded-xl bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-gray-400 focus:border-transparent text-sm resize-none"
+                            rows="3" placeholder="What happened? (e.g., I forgot our anniversary)"></textarea>
+                        <button id="apology-btn"
+                            class="w-full bg-gray-700 hover:bg-black text-white py-3 rounded-xl font-bold transition shadow-md flex items-center justify-center gap-2 text-sm">
+                            <span>Draft Apology</span>
+                        </button>
+                        <div id="apology-output"
+                            class="hidden p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm text-gray-700 font-medium">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents Section (Design Fix Applied) -->
+    <section class="py-20 bg-book-green text-book-cream" id="preview">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <h2 class="font-serif text-3xl lg:text-5xl font-bold mb-8">It's Biology, Not Character.</h2>
+                    <p class="text-lg text-book-cream/90 mb-6 leading-relaxed">
+                        I discovered a revolutionary truth: most breakdowns aren't caused by incompatibility. They are
+                        caused by nervous systems in <strong>protection mode</strong>.
+                    </p>
+                    <ul class="space-y-4 mt-8">
+                        <li class="flex items-start gap-3 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+                            <i class="fa-solid fa-pause mt-1 text-book-sage"></i>
+                            <span><strong>The Pause:</strong> Learn how to stop the spiral before it starts (Chapter
+                                8).</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white/10 p-4 rounded-xl backdrop-blur-sm">
+                            <i class="fa-solid fa-comments mt-1 text-book-sage"></i>
+                            <span><strong>Debate vs. Dialogue:</strong> Shift from trying to win to trying to understand
+                                (Chapter 6).</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/2 bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm shadow-2xl">
+                    <h3 class="font-serif text-2xl font-bold mb-8 text-book-sage border-b border-white/10 pb-4">Inside
+                        the Book</h3>
+                    <div class="space-y-5 text-sm lg:text-base font-light">
+
+                        <!-- Normal Item -->
+                        <div class="flex justify-between items-start gap-4">
+                            <span class="text-book-sage font-medium whitespace-nowrap">Chapter 3</span>
+                            <span class="text-white/80 text-right">The Science of Defensiveness</span>
+                        </div>
+
+                        <!-- Normal Item -->
+                        <div class="flex justify-between items-start gap-4">
+                            <span class="text-book-sage font-medium whitespace-nowrap">Chapter 13</span>
+                            <span class="text-white/80 text-right">Speaking So You'll Be Heard</span>
+                        </div>
+
+                        <!-- FIX: Handling Long Text -->
+                        <div class="flex justify-between items-start gap-4 bg-white/5 p-2 -mx-2 rounded">
+                            <span class="text-book-sage font-medium whitespace-nowrap">Chapter 17</span>
+                            <span class="text-white font-medium text-right leading-snug">With Partners: Turning Conflict
+                                Into Intimacy</span>
+                        </div>
+
+                        <!-- Normal Item -->
+                        <div class="flex justify-between items-start gap-4">
+                            <span class="text-book-sage font-medium whitespace-nowrap">Chapter 23</span>
+                            <span class="text-white/80 text-right">Boundaries Without Walls</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/10 text-center">
+                        <a href="https://www.amazon.com/dp/B0FS55QXVH" target="_blank"
+                            class="amazon-track-btn inline-flex items-center gap-2 bg-book-sage text-book-dark hover:bg-white hover:text-book-green font-bold py-3 px-8 rounded-full transition-colors shadow-lg">
+                            See Full Table of Contents <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (New Interesting Section 2) -->
+    <section class="py-20 bg-white" id="faq">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-serif text-3xl lg:text-4xl font-bold text-book-green mb-4">Frequently Asked Questions
+                </h2>
+                <p class="text-gray-600">Common questions about the book and the approach.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- Question 1 -->
+                <details
+                    class="group bg-book-cream rounded-2xl p-6 cursor-pointer transition-all duration-300 hover:shadow-md open:bg-white open:shadow-lg open:ring-1 open:ring-book-green/10">
+                    <summary
+                        class="flex justify-between items-center font-bold text-gray-800 group-hover:text-book-green">
+                        Will this work if my partner doesn't read it?
+                        <span
+                            class="transform group-open:rotate-180 transition-transform duration-300 text-book-green"><i
+                                class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 leading-relaxed">
+                        Absolutely. The book focuses on changing <em>your</em> side of the dynamic. When one person
+                        changes the way they speak and listen (using tools like de-escalation and the pause), the entire
+                        conversation shifts. You can't control them, but you can influence the dynamic.
+                    </div>
+                </details>
+
+                <!-- Question 2 -->
+                <details
+                    class="group bg-book-cream rounded-2xl p-6 cursor-pointer transition-all duration-300 hover:shadow-md open:bg-white open:shadow-lg open:ring-1 open:ring-book-green/10">
+                    <summary
+                        class="flex justify-between items-center font-bold text-gray-800 group-hover:text-book-green">
+                        Is this for couples only?
+                        <span
+                            class="transform group-open:rotate-180 transition-transform duration-300 text-book-green"><i
+                                class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 leading-relaxed">
+                        No. While there is a dedicated chapter for partners, the core principles (nervous system
+                        regulation, listening without rehearsing, boundaries) apply to everyone. There are specific
+                        chapters for <strong>Parents</strong>, <strong>Workplace</strong>, and
+                        <strong>Friendships</strong> as well.
+                    </div>
+                </details>
+
+                <!-- Question 3 -->
+                <details
+                    class="group bg-book-cream rounded-2xl p-6 cursor-pointer transition-all duration-300 hover:shadow-md open:bg-white open:shadow-lg open:ring-1 open:ring-book-green/10">
+                    <summary
+                        class="flex justify-between items-center font-bold text-gray-800 group-hover:text-book-green">
+                        How is this different from other communication books?
+                        <span
+                            class="transform group-open:rotate-180 transition-transform duration-300 text-book-green"><i
+                                class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="mt-4 text-gray-600 leading-relaxed">
+                        Many books focus on "scripts." This book focuses on <strong>biology</strong>. It teaches you how
+                        to calm your nervous system so you can actually <em>use</em> the scripts when you're angry. It
+                        bridges the gap between knowing what to say and actually being able to say it.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section class="py-20 bg-book-cream border-t border-book-green/5" id="about">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div
+                    class="md:w-2/5 bg-book-green flex items-center justify-center p-8 text-white text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-book-dark opacity-10 pattern-dots"></div>
+                    <div class="relative z-10">
+                        <!-- Author Image with Fallback -->
+                        <img src="author.jpg" alt="Farid Jafarli - Author Photo"
+                            class="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-2 border-white/20 shadow-lg"
+                            id="authorImageAbout"
+                            onerror="this.style.display='none'; document.getElementById('authorPlaceholderAbout').style.display='flex';">
+                        <div id="authorPlaceholderAbout"
+                            class="w-24 h-24 mx-auto bg-white/10 backdrop-blur rounded-full flex items-center justify-center text-white text-3xl font-serif font-bold mb-4 border border-white/20"
+                            style="display: none;">
+                            FJ
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold">Farid Jafarli</h3>
+                        <p class="text-book-sage mt-1 font-medium">Author</p>
+                    </div>
+                </div>
+                <div class="md:w-3/5 p-8 md:p-12 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 font-serif">Why I Wrote This Book</h3>
+                    <p class="text-gray-600 mb-6 italic leading-relaxed">
+                        "I was tired of watching good people hurt each other with words. Not intentionally... yet
+                        somehow, our attempts to communicate often lead to the very conflicts we were trying to avoid."
+                    </p>
+                    <a href="https://www.amazon.com/stores/author/B0FNWPDCLQ/about" target="_blank"
+                        class="text-book-green font-bold hover:text-book-blue transition flex items-center gap-2 group">
+                        More About the Author <i
+                            class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-book-dark text-book-cream/60 py-12 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-serif text-2xl text-white mb-2">How to Talk Without Fighting</p>
+            <p class="text-sm mb-8 text-white/40">A Guide to Calm, Clear, Connected Conversations</p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 text-sm font-medium mb-8">
+                <a href="#problem" class="hover:text-white transition">The Problem</a>
+                <a href="#tools" class="hover:text-white transition">Free Tools</a>
+                <a href="#preview" class="hover:text-white transition">Inside the Book</a>
+            </div>
+
+            <div class="h-px w-12 bg-white/10 mx-auto mb-8"></div>
+
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> Farid Jafarli. All rights reserved.
+            </p>
+            <p class="text-xs mt-2 text-white/20">As an Amazon Associate, we earn from qualifying purchases.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module">
+        import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
+
+        // NOTE: In a real deployment, you should use a backend proxy to hide this key.
+        const apiKey = "AIzaSyAGUKC9CtvQF5Pg6TriC2AkaBfRTycShkk";
+        const genAI = new GoogleGenerativeAI(apiKey);
+        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" }); // Updated model name
+
+        // --- UI Helpers ---
+        function setBtnLoading(btnId, isLoading, text) {
+            const btn = document.getElementById(btnId);
+            if (isLoading) {
+                btn.disabled = true;
+                btn.innerHTML = '<div class="loader"></div> Processing...';
+                btn.classList.add('opacity-80', 'cursor-not-allowed');
+            } else {
+                btn.disabled = false;
+                btn.innerHTML = text;
+                btn.classList.remove('opacity-80', 'cursor-not-allowed');
+            }
+        }
+
+        function showOutput(containerId, textId, text) {
+            const container = document.getElementById(containerId);
+            // Simple typewriter effect logic could go here, sticking to simple fade for now
+            container.classList.remove('hidden');
+            container.innerHTML = text.replace(/\n/g, '<br>'); // Preserving newlines
+        }
+
+        // --- API Wrapper with simple error handling ---
+        async function runGemini(prompt, sysInstruct) {
+            try {
+                const result = await model.generateContent({
+                    contents: [{ role: "user", parts: [{ text: prompt }] }],
+                    systemInstruction: { parts: [{ text: sysInstruct }] }
+                });
+                return result.response.text();
+            } catch (error) {
+                console.error("Gemini Error:", error);
+                return "⚠️ Connection error. Please check your API key or internet connection.";
+            }
+        }
+
+        // --- Book Cover 3D Tilt Effect ---
+        const bookContainer = document.querySelector('.perspective-container');
+        const book = document.querySelector('.book-cover-3d');
+
+        if (bookContainer && book) {
+            bookContainer.addEventListener('mousemove', (e) => {
+                const rect = bookContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                // Calculate position relative to center
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                // Calculate rotation (max +/- 15 deg)
+                const rotateY = ((x - centerX) / centerX) * 15;
+                const rotateX = ((y - centerY) / centerY) * -15;
+
+                // Apply style
+                book.classList.add('tracking');
+                book.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.05)`;
+                // Dynamic shadow based on tilt
+                book.style.boxShadow = `${-rotateY}px ${20 + (rotateX * -1)}px 30px rgba(0,0,0,0.4)`;
+            });
+
+            bookContainer.addEventListener('mouseleave', () => {
+                book.classList.remove('tracking');
+                // Reset to default styling defined in CSS
+                book.style.transform = '';
+                book.style.boxShadow = '';
+            });
+        }
+
+        // --- Tool 1 Logic: Conflict Transformer ---
+        document.getElementById('transformer-btn').addEventListener('click', async () => {
+            const input = document.getElementById('transformer-input').value;
+            if (!input) return;
+
+            setBtnLoading('transformer-btn', true, '');
+            const sys = "Rewrite the user's aggressive text into a calm 'I-statement' focusing on feelings and needs, based on Nonviolent Communication principles. Keep it short.";
+            const res = await runGemini(input, sys);
+
+            setBtnLoading('transformer-btn', false, '<span>Transform Text</span>');
+            showOutput('transformer-output', null, `<strong>Try this instead:</strong><br>"${res}"`);
+        });
+
+        // --- Tool 2 Logic: Tone Check ---
+        document.getElementById('tone-btn').addEventListener('click', async () => {
+            const input = document.getElementById('tone-input').value;
+            if (!input) return;
+
+            setBtnLoading('tone-btn', true, '');
+            const sys = "Analyze the emotional tone. Is it passive-aggressive, defensive, or calm? Give a 1-sentence verdict and 1 quick tip to improve it.";
+            const res = await runGemini(input, sys);
+
+            setBtnLoading('tone-btn', false, '<span>Analyze Tone</span>');
+            showOutput('tone-output', null, res);
+        });
+
+        // --- Tool 3 Logic: Apology Architect ---
+        document.getElementById('apology-btn').addEventListener('click', async () => {
+            const input = document.getElementById('apology-input').value;
+            if (!input) return;
+
+            setBtnLoading('apology-btn', true, '');
+            const sys = "Write a sincere apology for the situation described. Focus on taking responsibility (no 'buts') and acknowledging impact on the other person. Keep it concise.";
+            const res = await runGemini(input, sys);
+
+            setBtnLoading('apology-btn', false, '<span>Draft Apology</span>');
+            showOutput('apology-output', null, res);
+        });
+
+        // --- Tracking ---
+        document.querySelectorAll('.amazon-track-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'purchase_click', { 'event_category': 'conversion', 'event_label': 'Amazon Link' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

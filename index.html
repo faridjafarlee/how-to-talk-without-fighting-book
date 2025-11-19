@@ -652,7 +652,7 @@
         import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
         // NOTE: In a real deployment, you should use a backend proxy to hide this key.
-        const apiKey = "AIzaSyAGUKC9CtvQF5Pg6TriC2AkaBfRTycShkk";
+        const apiKey = "";
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" }); // Updated model name
 
@@ -764,12 +764,20 @@
         });
 
         // --- Tracking ---
+        function trackAmazonClick() {
+            console.log('Amazon link clicked - sending event to GA4');
+            if (typeof gtag === 'function') {
+                gtag('event', 'click', {
+                    'event_category': 'outbound',
+                    'event_label': 'Amazon Buy Link',
+                    'transport_type': 'beacon',
+                    'value': 1
+                });
+            }
+        }
+
         document.querySelectorAll('.amazon-track-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                if (typeof gtag === 'function') {
-                    gtag('event', 'purchase_click', { 'event_category': 'conversion', 'event_label': 'Amazon Link' });
-                }
-            });
+            btn.addEventListener('click', trackAmazonClick);
         });
     </script>
 </body>
